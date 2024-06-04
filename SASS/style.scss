@@ -1,0 +1,94 @@
+// Define colors
+$primary-color: #9356DC;
+$secondary-color: #FF79DA;
+$tertiary-color: #99E2D0;
+
+// Apply styles to body
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+// Header styles
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: $primary-color;
+    color: white;
+
+    &__logo {
+        height: 50px;
+    }
+
+    &__location {
+        display: flex;
+        align-items: center;
+        font-size: 1rem;
+
+        &-icon {
+            height: 20px;
+            margin-right: 8px;
+        }
+    }
+}
+
+// Main section styles
+.main {
+    padding: 20px;
+}
+
+// Section title styles
+.section-title {
+    font-family: 'Shrikhand', cursive;
+    color: $secondary-color;
+    margin-bottom: 20px;
+}
+
+// Card restaurant styles
+.card-restaurants {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+
+    &__img {
+        width: 100%;
+        height: auto; /* Maintain aspect ratio */
+        display: block; /* Ensure the image is displayed as a block element */
+    }
+
+    &__details {
+        background-color: white;
+        padding: 10px;
+        border: 1px solid #ddd;
+
+        &-tag {
+            background-color: $tertiary-color;
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+
+        &-heart {
+            font-size: 1.2rem;
+            color: $primary-color;
+        }
+    }
+}
+
+// Footer styles
+.footer {
+    padding: 20px;
+    background-color: #f8f8f8;
+    text-align: center;
+
+    &-link {
+        margin: 10px 0;
+        color: $primary-color;
+
+        &__img {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+}
