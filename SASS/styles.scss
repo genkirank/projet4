@@ -6,6 +6,7 @@ $tertiary-color: #99E2D0;
 // Apply styles to body
 body {
     font-family: 'Roboto', sans-serif;
+    margin: 0%;
 }
 
 // Header styles
@@ -13,18 +14,27 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    background-color:blue;
-    color: white;
+    color: black;
+    flex-direction: column;
+    width: 100%;
 
     &__logo {
-        height: 50px;
+        height: 36px;
+        width: 196px;
+        margin-top: 20px;
     }
-
+        
     &__location {
         display: flex;
+        justify-content: center;
+        background-color: #EAEAEA;
+        width: 100%;
+        font-size: 16px;
+        font-weight: 500;
+        gap: 10px;
+        height: 50px;
         align-items: center;
-        font-size: 1rem;
+        
 
         &-icon {
             height: 20px;
@@ -35,14 +45,25 @@ body {
 
 // Main section styles
 .main {
-    padding: 20px;
+    padding: 28px;
+    padding-top: 0%;
 }
+//section 1//
+#section1{
+    &__h2{
+        font-weight: 700;
+        font-size: 24px;
 
+    }
+}
 // Section title styles
 .section-title {
-    font-family: 'Shrikhand', cursive;
-    color: $secondary-color;
+    color:  #000000;
     margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28.13px; 
+    
 }
 
 // Card restaurant styles
