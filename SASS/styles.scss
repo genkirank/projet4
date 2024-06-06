@@ -53,7 +53,9 @@ body {
     &__h2{
         font-weight: 700;
         font-size: 24px;
-
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
 }
 // Section title styles
@@ -63,6 +65,9 @@ body {
     font-weight: 700;
     font-size: 24px;
     line-height: 28.13px; 
+    display: flex;
+    align-items: center;
+    
     
 }
 
