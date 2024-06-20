@@ -144,6 +144,7 @@ body {
   display: flex;
   align-items: center;
   align-self: flex-start;
+  margin-left: 30px;
 }
 .restaurants__card {
   display: flex;
@@ -152,6 +153,7 @@ body {
   width: 340px;
   border-radius: 15px;
   border: none;
+  position: relative;
 }
 .restaurants__card__img {
   width: 100%;
@@ -160,55 +162,84 @@ body {
   box-sizing: border-box;
   border-radius: 15px 15px 0 0;
   object-fit: cover;
+  height: 174px;
 }
 .restaurants__card__details {
+  height: 77px;
   background-color: white;
   padding: 10px;
   border: 1px solid #ddd;
   box-sizing: border-box;
+  border-radius: 0px 0px 15px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 .restaurants__card__details-tag {
   background-color: #99E2D0;
   padding: 5px;
   border-radius: 5px;
   font-size: 0.9rem;
+  color: #008766;
+  position: absolute;
+  right: 15px;
+  top: 15px;
 }
 .restaurants__card__details-name {
   font-size: 18px;
   font-weight: 700;
-  margin-top: 10px;
+  margin: 0%;
 }
 .restaurants__card__details-location {
   font-size: 1rem;
   color: #666;
+  margin-top: 0%;
 }
 .restaurants__card__details-heart {
   font-size: 1.2rem;
-  color: #9356DC;
   cursor: pointer;
+  position: absolute;
+  right: 25px;
+  bottom: 33px;
+  height: 21px;
+  width: 22px;
 }
 
 .footer {
   padding: 20px;
   background-color: #353535;
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 .footer__logo {
-  width: 100%;
+  width: 139px;
+  height: 27px;
   margin-bottom: 20px;
   color: #ddd;
+  margin: 0%;
 }
 .footer__link {
-  margin: 10px 0;
+  margin-top: 10Px;
   color: #9356DC;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 10px;
 }
 .footer__link-text {
   margin-bottom: 5px;
   font-weight: 500;
+  color: white;
+  margin: 0%;
 }
 .footer__link-img {
-  display: block;
-  margin: 0 auto;
+  height: 13px;
+  width: 11px;
+  margin: 0%;
+}
+.footer__link--legal, .footer__link--contact {
+  color: white;
 }
 .footer__link--legal, .footer__link--contact {
   cursor: pointer;

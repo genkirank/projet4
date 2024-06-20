@@ -168,6 +168,7 @@ body {
         display: flex;
         align-items: center;
         align-self: flex-start;
+        margin-left: 30px;
     }
 
     &__card {
@@ -177,6 +178,8 @@ body {
         width: 340px; 
         border-radius: 15px;
         border: none;
+        position: relative;
+
 
         &__img {
             width: 100%;
@@ -185,36 +188,53 @@ body {
             box-sizing: border-box;
             border-radius: 15px 15px 0 0;
             object-fit: cover;
+            height: 174px;
         }
 
         &__details {
+            height: 77px;
             background-color: white;
             padding: 10px;
             border: 1px solid #ddd;
             box-sizing: border-box;
+            border-radius: 00px 00px 15px 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
 
             &-tag {
                 background-color: $tertiary-color;
                 padding: 5px;
                 border-radius: 5px;
                 font-size: 0.9rem;
+                color: #008766;
+                position: absolute;
+                right: 15px;
+                top: 15px;
             }
 
             &-name {
                 font-size: 18px;
                 font-weight: 700;
-                margin-top: 10px;
+                margin: 0%;
             }
 
             &-location {
                 font-size: 1rem;
                 color: #666;
+                margin-top: 0%;
+
             }
 
             &-heart {
-                font-size: 1.2rem;
-                color: $primary-color;
-                cursor: pointer;
+            font-size: 1.2rem;
+            cursor: pointer;
+            position: absolute;
+            right: 25px;
+            bottom: 33px;
+            height: 21px;
+            width: 22px;
             }
         }
     }
@@ -225,27 +245,42 @@ body {
     padding: 20px;
     background-color: #353535;
     text-align: center;
+    display: flex;
+    flex-direction: column;
 
     &__logo {
-        width: 100%;
+        width: 139px;
+        height: 27px;
         margin-bottom: 20px;
         color: #ddd;
+        margin: 0%;
+
     }
 
     &__link {
-        margin: 10px 0;
+        margin-top: 10Px;
         color: $primary-color;
+        display: flex;
+        flex-direction:row;
+        align-items: baseline;
+        gap: 10px;
 
         &-text {
             margin-bottom: 5px;
             font-weight: 500;
+            color: white;
+            margin: 0%;
         }
 
         &-img {
-            display: block;
-            margin: 0 auto;
+            height: 13px;
+            width: 11px;
+            margin: 0%;
         }
+        &--legal,&--contact{
+            color: white;
 
+        }
         &--legal, &--contact {
             cursor: pointer;
 
