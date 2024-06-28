@@ -43,10 +43,13 @@ body {
 }
 
 .reservation {
+  display: flex;
+  flex-direction: column;
   background-color: #F6F6F6;
   width: 100%;
   padding: 30px 0;
   justify-content: center;
+  align-items: center;
   gap: 18px;
 }
 .reservation__title {
@@ -55,16 +58,18 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-top: 0;
+  margin: 0%;
 }
 .reservation__description {
   text-align: center;
   font-weight: 300;
+  margin: auto;
 }
 .reservation__button {
-  display: block;
-  margin: 0 auto;
-  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0%;
   background: linear-gradient(#FF79DA, #9356DC);
   color: white;
   border: none;
@@ -74,6 +79,12 @@ body {
   width: 218px;
   height: 50px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+  text-decoration: none; /* Remove underline from links */
+}
+.reservation__button:hover {
+  opacity: 0.75;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  transition-duration: 0.3s;
 }
 
 .fonctionnement {
@@ -82,11 +93,10 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
+  margin: 20px;
 }
 .fonctionnement__title {
-  padding-left: 30px;
   color: #000;
-  margin-bottom: 20px;
   font-weight: 700;
   font-size: 24px;
   line-height: 28.13px;
@@ -98,7 +108,7 @@ body {
   padding: 25px 22px 25px 0px;
   background-color: #F6F6F6;
   border-radius: 15px;
-  width: 80%;
+  width: 90%;
   align-items: center;
   gap: 30px;
   justify-content: center;
@@ -135,16 +145,16 @@ body {
   align-items: center;
   background-color: #F6F6F6;
   gap: 18px;
+  padding: 50px 20px 50px 20px;
 }
 .restaurants__title {
-  margin-bottom: 20px;
+  margin: 0px;
   font-weight: 700;
   font-size: 24px;
   line-height: 28.13px;
   display: flex;
   align-items: center;
   align-self: flex-start;
-  margin-left: 30px;
 }
 .restaurants__card {
   display: flex;
@@ -170,7 +180,7 @@ body {
   padding: 10px;
   border: 1px solid #ddd;
   box-sizing: border-box;
-  border-radius: 0px 0px 15px 15px;
+  border-radius: 0 0 15px 15px;
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -188,12 +198,12 @@ body {
 .restaurants__card__details-name {
   font-size: 18px;
   font-weight: 700;
-  margin: 0%;
+  margin: 0;
 }
 .restaurants__card__details-location {
   font-size: 1rem;
   color: #666;
-  margin-top: 0%;
+  margin-top: 0;
 }
 .restaurants__card__details-heart {
   font-size: 1.2rem;
@@ -201,8 +211,36 @@ body {
   position: absolute;
   right: 25px;
   bottom: 33px;
-  height: 21px;
   width: 22px;
+  height: 22px;
+}
+.restaurants__card__details-heart input[type=checkbox] {
+  display: none;
+}
+.restaurants__card__details-heart label {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 22px;
+  position: relative;
+}
+.restaurants__card__details-heart label::before {
+  content: attr(data-icon);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-attachment: fixed black;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.restaurants__card__details-heart input[type=checkbox]:checked + label::before {
+  opacity: 1;
+}
+.restaurants__card__details-heart input[type=checkbox]:checked + label {
+  background-color: #9356DC;
 }
 
 .footer {

@@ -6,23 +6,25 @@
     <title>ohmyfood</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/styles.css">
+    <script src="https://kit.fontawesome.com/601dd79dcd.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header class="header">
         <img src="assets/images/logo/ohmyfood.png" alt="Logo du Site" class="header__logo">
-        <p class="header__location">
+        <div class="header__location">
             <img src="assets/images/logo/Icon/Pin.png" alt="Icon" class="header__location-icon">
             Paris, Belleville
-        </p>
+        </div>
     </header>
 
     <main class="main">
         <section id="section1" class="reservation">
             <!-- br -->
+            
             <h2 class="reservation__title">Réservez le menu qui <br> vous convient</h2>
             <p class="reservation__description">Découvrez des restaurants d’exception, <br> sélectionnés par nos soins.</p> 
             <!-- br pour separet le mot  -->
-            <button class="reservation__button">Explorer nos restaurants</button>
+            <a href="#restaurant" class="reservation__button">Explorer nos restaurants</a>
         </section>
         
         <section id="section-fonctionnement" class="fonctionnement">
@@ -55,7 +57,10 @@
                     <div class="restaurants__card__details-tag">Nouveau</div>
                     <h3 class="restaurants__card__details-name">La palette du goût</h3>
                     <p class="restaurants__card__details-location">Ménilmontant</p>
-                    <div class="restaurants__card__details-heart">&#9825;</div>
+                    <div class="restaurants__card__details-heart">
+                        <input type="checkbox" id="heart1" class="heart-checkbox" />
+                        <label for="heart1">&#9825;</label>
+                    </div> 
                 </div>
             </div>
 
