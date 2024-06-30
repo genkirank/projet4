@@ -4,6 +4,50 @@ body {
   align-items: center;
 }
 
+.splash-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #171a17;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeOut 8s forwards;
+  z-index: 1;
+}
+.splash-screen h1 {
+  color: white;
+  font-size: 3em;
+}
+
+.main-content {
+  display: none;
+  padding: 20px;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  90% {
+    opacity: 0;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+  }
+}
+body.animation-complete .splash-screen {
+  display: none;
+}
+
+body.animation-complete .main-content {
+  display: block;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -79,12 +123,12 @@ body {
   width: 218px;
   height: 50px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
-  text-decoration: none; /* Remove underline from links */
+  text-decoration: none;
+  transition: box-shadow 0.3s ease-out, opacity 0.3s ease-out;
 }
 .reservation__button:hover {
   opacity: 0.75;
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-  transition-duration: 0.3s;
 }
 
 .fonctionnement {
@@ -207,40 +251,25 @@ body {
 }
 .restaurants__card__details-heart {
   font-size: 1.2rem;
-  cursor: pointer;
   position: absolute;
   right: 25px;
-  bottom: 33px;
   width: 22px;
   height: 22px;
 }
-.restaurants__card__details-heart input[type=checkbox] {
-  display: none;
-}
-.restaurants__card__details-heart label {
-  display: block;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  line-height: 22px;
-  position: relative;
-}
-.restaurants__card__details-heart label::before {
-  content: attr(data-icon);
+.restaurants__card__details .fa-heart {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-attachment: fixed black;
+  bottom: -10px;
+}
+.restaurants__card__details .fa-heart-solid {
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition-property: all;
+  transition-duration: 3ms;
 }
-.restaurants__card__details-heart input[type=checkbox]:checked + label::before {
+.restaurants__card__details .fa-heart-solid:hover {
   opacity: 1;
-}
-.restaurants__card__details-heart input[type=checkbox]:checked + label {
-  background-color: #9356DC;
+  background: linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .footer {

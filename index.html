@@ -9,6 +9,9 @@
     <script src="https://kit.fontawesome.com/601dd79dcd.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <div class="splash-screen">
+        <h1>Chargement</h1>
+    </div>
     <header class="header">
         <img src="assets/images/logo/ohmyfood.png" alt="Logo du Site" class="header__logo">
         <div class="header__location">
@@ -20,7 +23,6 @@
     <main class="main">
         <section id="section1" class="reservation">
             <!-- br -->
-            
             <h2 class="reservation__title">Réservez le menu qui <br> vous convient</h2>
             <p class="reservation__description">Découvrez des restaurants d’exception, <br> sélectionnés par nos soins.</p> 
             <!-- br pour separet le mot  -->
@@ -29,23 +31,23 @@
         
         <section id="section-fonctionnement" class="fonctionnement">
             <h2 class="fonctionnement__title">Fonctionnement</h2>
-            <article class="fonctionnement__step step">
+            <div class="fonctionnement__step step">
                 <div class="step__icon">1</div>
                 <img src="assets/images/logo/fonctionnement1.png" alt="Icône-Téléphone" class="step__img">
                 <div class="step__text">Choisissez un restaurant</div> 
-            </article>
+            </div>
 
-            <article class="fonctionnement__step step">
+            <div class="fonctionnement__step step">
                 <div class="step__icon">2</div>
                 <img src="assets/images/logo/fonctionement2.png" alt="Icône-Menu" class="step__img">
                 <div class="step__text">Composez votre menu</div>
-            </article>
+            </div>
 
-            <article class="fonctionnement__step step">
+            <div class="fonctionnement__step step">
                 <div class="step__icon">3</div>
                 <img src="assets/images/logo/fonctionnement3.png" alt="Icône-Restaurant" class="step__img">
                 <div class="step__text">Dégustez au restaurant</div>
-            </article>
+            </div>
         </section>
 
         <section id="restaurant" class="restaurants">
@@ -58,8 +60,8 @@
                     <h3 class="restaurants__card__details-name">La palette du goût</h3>
                     <p class="restaurants__card__details-location">Ménilmontant</p>
                     <div class="restaurants__card__details-heart">
-                        <input type="checkbox" id="heart1" class="heart-checkbox" />
-                        <label for="heart1">&#9825;</label>
+                        <i class="fa-regular fa-heart fa-heart-empty"></i>
+                        <i class="fa-solid fa-heart fa-heart-solid"></i>
                     </div> 
                 </div>
             </div>
@@ -70,8 +72,10 @@
                     <div class="restaurants__card__details-tag">Nouveau</div>
                     <h3 class="restaurants__card__details-name">La note enchantée</h3>
                     <p class="restaurants__card__details-location">Charonne</p>
-                    <div class="restaurants__card__details-heart">&#9825;</div>
-                </div>
+                    <div class="restaurants__card__details-heart">
+                        <i class="fa-regular fa-heart fa-heart-empty"></i>
+                        <i class="fa-solid fa-heart fa-heart-solid"></i>
+                    </div> 
             </div>
 
             <div class="restaurants__card card">
@@ -79,8 +83,10 @@
                 <div class="restaurants__card__details">
                     <h3 class="restaurants__card__details-name">À la française</h3>
                     <p class="restaurants__card__details-location">Cité Rouge</p>
-                    <div class="restaurants__card__details-heart">&#9825;</div>
-                </div>
+                    <div class="restaurants__card__details-heart">
+                        <i class="fa-regular fa-heart fa-heart-empty"></i>
+                        <i class="fa-solid fa-heart fa-heart-solid"></i>
+                    </div> 
             </div>
 
             <div class="restaurants__card card">
@@ -88,8 +94,10 @@
                 <div class="restaurants__card__details">
                     <h3 class="restaurants__card__details-name">Le délice des sens</h3>
                     <p class="restaurants__card__details-location">Folie-Méricourt</p>
-                    <div class="restaurants__card__details-heart">&#9825;</div>
-                </div>
+                    <div class="restaurants__card__details-heart">
+                        <i class="fa-solid fa-heart fa-heart-solid"></i>
+                        <i class="fa-regular fa-heart fa-heart-regular"></i>
+                    </div> 
             </div>
         </section>
     </main>

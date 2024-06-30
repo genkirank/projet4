@@ -10,6 +10,63 @@ body {
     margin: 0;
     align-items: center;
 }
+// Importer les fichiers de réglages si nécessaire
+
+// Variables SCSS pour la personnalisation rapide
+$background-color: #171a17;
+$text-color: white;
+$animation-duration: 8s;
+
+// Styles pour la splash screen
+.splash-screen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: $background-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeOut $animation-duration forwards;
+    z-index: 1;
+    
+    h1 {
+        color: $text-color;
+        font-size: 3em;
+    }
+}
+
+// Styles pour le contenu principal
+.main-content {
+    display: none;
+    padding: 20px;
+}
+
+// Animation pour faire disparaître la splash screen
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        visibility: visible;
+    }
+    90% {
+        opacity: 0;
+        visibility: visible;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+    }
+}
+
+// Ajouter des classes pour déclencher les animations
+body.animation-complete .splash-screen {
+    display: none;
+}
+
+body.animation-complete .main-content {
+    display: block;
+}
+
 
 // Header styles
 .header {
@@ -97,12 +154,12 @@ body {
         width: 218px;
         height: 50px;
         box-shadow: 0px 4px 4px 0px #00000040;
-        text-decoration: none; /* Remove underline from links */
+        text-decoration: none; 
+        transition: box-shadow 0.3s ease-out, opacity 0.3s ease-out;
         &:hover {
           opacity: 0.75;
             box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); // Slightly lighter shadow
            
-            transition-duration: 0.3s; 
         }
     }
 }
@@ -243,48 +300,30 @@ body {
             }
             &-heart {
                 font-size: 1.2rem;
-                cursor: pointer;
                 position: absolute;
                 right: 25px;
-                bottom: 33px;
                 width: 22px;
                 height: 22px;
-
-                input[type="checkbox"] {
-                    display: none;
-                }
-
-                label {
-                    display: block;
-                    width: 100%;
-                    height: 100%;
-                    text-align: center;
-                    line-height: 22px;
-                    position: relative;
-                }
-
-                label::before {
-                    content: attr(data-icon);
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                   background-attachment: fixed black;
-                    opacity: 0;
-                    transition: opacity 0.3s ease;
-                }
-
-                input[type="checkbox"]:checked + label::before {
-                    opacity: 1;
-                }
-
-                input[type="checkbox"]:checked + label {
-                    background-color: $primary-color;
-                } 
             }
-         }
-}   }
+            .fa-heart{
+                position: absolute;
+                bottom: -10px;
+
+                &-solid{
+                    opacity: 0;
+                    transition-property: all;
+                    transition-duration: 3ms;
+                    &:hover{
+                        opacity: 1;
+                        background: linear-gradient($primary-color,$secondary-color);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+                }
+            }
+         }    
+    } 
+  }
 
 
 // Footer styles
