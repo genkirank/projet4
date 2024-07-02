@@ -108,7 +108,7 @@ body.animation-complete .main-content {
 
 // Main section styles
 .main {
-    gap: 30px;
+   
     display: flex;
     flex-direction: column;
 }
@@ -406,7 +406,34 @@ body.animation-complete .main-content {
     }
    
     // Card restaurant styles
-    
+    .restaurants{
+        padding: 30px 180px;
+        &_desktop{
+            
+            gap: 50Px 100px;
+            display: flex;
+            flex-wrap: wrap;
+
+        }
+        &__card{
+            width: 490px;
+        }
+    }
 
     // Footer styles
+    .footer{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 20px;
+        &__desktop{
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+        }
+        &__link{
+            margin: 0%;
+        }
+    }
 }   
+

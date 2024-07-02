@@ -81,7 +81,6 @@ body.animation-complete .main-content {
 }
 
 .main {
-  gap: 30px;
   display: flex;
   flex-direction: column;
 }
@@ -333,6 +332,31 @@ body.animation-complete .main-content {
   }
   .fonctionnement .step {
     padding: 20px 70px 14px 40px;
+  }
+  .restaurants {
+    padding: 30px 180px;
+  }
+  .restaurants_desktop {
+    gap: 50Px 100px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .restaurants__card {
+    width: 490px;
+  }
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 20px;
+  }
+  .footer__desktop {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  .footer__link {
+    margin: 0%;
   }
 }
 
