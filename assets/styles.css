@@ -147,12 +147,18 @@ body.animation-complete .main-content {
   display: flex;
   align-self: flex-start;
 }
-.fonctionnement__step {
+.fonctionnement__desktop {
   display: flex;
-  padding: 25px 22px 25px 0px;
+  flex-direction: column;
+  gap: 20px;
+  align-self: baseline;
+}
+.fonctionnement__desktop .step {
+  display: flex;
+  padding: 25px 30px 25px 22px;
   background-color: #F6F6F6;
   border-radius: 15px;
-  width: 90%;
+  width: 100%;
   align-items: center;
   gap: 30px;
   justify-content: center;
@@ -160,8 +166,7 @@ body.animation-complete .main-content {
   position: relative;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
 }
-
-.step__icon {
+.fonctionnement__desktop .step__icon {
   position: absolute;
   background-color: #9356DC;
   width: 24px;
@@ -173,12 +178,12 @@ body.animation-complete .main-content {
   color: white;
   left: -11px;
 }
-.step__icon__texte {
+.fonctionnement__desktop .step__icon__texte {
   font-size: 16px;
   font-weight: 500;
   font-family: Roboto;
 }
-.step__img {
+.fonctionnement__desktop .step__img {
   width: auto;
   height: auto;
 }
@@ -315,9 +320,19 @@ body.animation-complete .main-content {
   text-decoration: underline;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1430px) {
   .reservation__title {
     font-size: 40px;
+  }
+  .fonctionnement {
+    margin: 50px 180px;
+  }
+  .fonctionnement__desktop {
+    flex-direction: row;
+    gap: 25px;
+  }
+  .fonctionnement .step {
+    padding: 20px 70px 14px 40px;
   }
 }
 

@@ -173,6 +173,7 @@ body.animation-complete .main-content {
     flex-direction: column;
     position: relative;
     margin: 20px ;
+    
 
     &__title {
         
@@ -183,47 +184,52 @@ body.animation-complete .main-content {
         display: flex;
         align-self: flex-start;
     }
+       &__desktop{ 
+            display: flex;
+            flex-direction: column;  
+            gap: 20px;
+            align-self: baseline;
 
-    &__step {
-        display: flex;
-        padding:  25px 22px 25px 00px;
-        background-color: #F6F6F6;
-        border-radius: 15px;
-        width: 90%;
-        align-items: center;
-        gap: 30px;
-        justify-content: center;
-        flex-direction: row;
-        position: relative;
-        box-shadow: 0px 4px 4px 0px #00000040;
+            .step {
+                display: flex;
+                padding:  25px 30px 25px 22px;
+                background-color: #F6F6F6;
+                border-radius: 15px;
+                width: 100%;
+                align-items: center;
+                gap: 30px;
+                justify-content: center;
+                flex-direction: row;
+                position: relative;
+                box-shadow: 0px 4px 4px 0px #00000040;
+                &__icon{
+                    position: absolute;
+                    background-color: $primary-color;
+                    width: 24px;
+                    height: 24px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50%;
+                    color: white;
+                    left: -11px;
+                
+                    &__texte{
+                        font-size: 16px;
+                        font-weight: 500;
+                        font-family: Roboto;
+                    } 
+                }
+                &__img{
+                    width: auto;
+                    height: auto;
+                }
+            }
+       }         
+}   
 
-    }   
-}
 
-.step {
-    &__icon{
-        position: absolute;
-        background-color: $primary-color;
-        width: 24px;
-        height: 24px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 50%;
-        color: white;
-        left: -11px;
-    
-        &__texte{
-            font-size: 16px;
-            font-weight: 500;
-            font-family: Roboto;
-        } 
-    }
-    &__img{
-        width: auto;
-        height: auto;
-    }
-}
+
 // Card restaurant styles
 .restaurants {
     display: flex;
@@ -377,91 +383,30 @@ body.animation-complete .main-content {
     }
 }
 
-@media (min-width: 1440px){
+@media (min-width: 1430px){
 
-
-// Header styles
-.header {
-
-    &__logo {
-    }
-        
-    &__location {
-        &-icon {
+    // Header styles
+    // Main section styles
+    // Reservation section styles
+    .reservation {
+        &__title {
+            font-size: 40px;
+        }
+    }    
+    // Fonctionnement section styles
+    .fonctionnement{
+      margin: 50px 180px;
+        &__desktop{
+            flex-direction: row;
+            gap: 25px;
+        }
+        .step{
+            padding:20px 70px 14px 40px;
         }
     }
-}
+   
+    // Card restaurant styles
+    
 
-// Main section styles
-.main {
-}
-
-// Reservation section styles
-.reservation {
-    &__title {
-        font-size: 40px;
-}
-
-.step {
-    &__icon{
-        &__texte{
-        } 
-    }
-    &__img{
-    }
-}
-// Card restaurant styles
-.restaurants {
-    &__title {
-        
-        
-    }
-
-    &__card {
-        &__img {
-        }
-
-        &__details {
-            &-tag {
-            }
-
-            &-name {
-            }
-
-            &-location {
-            }
-            &-heart {
-            }
-            .fa-heart{
-                &-solid{
-                    &:hover{
-                    }
-                }
-            }
-        }    
-    }  
-}
-
-
-// Footer styles
-.footer {
-    &__logo {
-    }
-
-    &__link {
-        &-text {
-        }
-
-        &-img {
-        }
-        &--legal,&--contact{
-        }
-        &--legal, &--contact {
-            &:hover {
-            }
-        }
-    }
-}
-
-}
-}
+    // Footer styles
+}   
