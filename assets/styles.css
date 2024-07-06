@@ -60,7 +60,7 @@ body.animation-complete .main-content {
 .header__logo {
   height: 36px;
   width: 196px;
-  margin-top: 20px;
+  padding: 20px 0px;
 }
 .header__location {
   display: flex;
@@ -150,7 +150,6 @@ body.animation-complete .main-content {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  align-self: baseline;
 }
 .fonctionnement__desktop .step {
   display: flex;
@@ -260,6 +259,15 @@ body.animation-complete .main-content {
   width: 22px;
   height: 22px;
 }
+.restaurants__card__details-heart-input {
+  appearance: none;
+}
+.restaurants__card__details-heart-input:checked ~ .fa-heart-solid {
+  opacity: 1;
+  background: linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .restaurants__card__details .fa-heart {
   position: absolute;
   bottom: -10px;
@@ -358,6 +366,50 @@ body.animation-complete .main-content {
   .footer__link {
     margin: 0%;
   }
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main--background {
+  width: 100%;
+  height: 275px;
+}
+.main__title {
+  display: flex;
+  flex-direction: colum;
+  align-items: center;
+}
+.main__title__details-heart--empty {
+  font-size: 1.2rem;
+  position: absolute;
+  right: 25px;
+  width: 22px;
+  height: 22px;
+}
+.main__title__details-heart--solid {
+  font-size: 1.2rem;
+  position: absolute;
+  right: 25px;
+  width: 22px;
+  height: 22px;
+}
+.main .fa-heart {
+  position: absolute;
+  bottom: -10px;
+}
+.main .fa-heart-solid {
+  opacity: 0;
+  transition-property: all;
+  transition-duration: 3ms;
+}
+.main .fa-heart-solid:hover {
+  opacity: 1;
+  background: linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /*# sourceMappingURL=styles.css.map */
