@@ -15,7 +15,7 @@ body {
 // Variables SCSS pour la personnalisation rapide
 $background-color: #171a17;
 $text-color: white;
-$animation-duration: 8s;
+$animation-duration: 3s;
 
 // Styles pour la splash screen
 .splash-screen {
@@ -27,7 +27,7 @@ $animation-duration: 8s;
     justify-content: center;
     align-items: center;
     animation: fadeOut $animation-duration forwards;
-    z-index: 1;
+    z-index: 10;
     
     h1 {
         color: $text-color;
@@ -447,60 +447,150 @@ body.animation-complete .main-content {
         }
     }
 }   
-
-// Menu style
-.header{
+//______________________________________________________________________________________
+//page de menu
+.header-menu {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    justify-content: space-between;
+    width: 100%;
 
+
+&__btn {
+    display: flex;
+    border: none;
+    background-color: white;
+  
 }
 
+&__logo {
+    height: 36px;
+    width: 196px;
+    padding: 20px 0;
+    margin-left: auto;
+    margin-right: auto; /* Centers the logo horizontally */
+}
+}
 .main{
-    &--background{
-        width: 100%;
-        height: 275px;
+    &__background{
+        z-index: 2;
     }
+    &__conteneur{
+        margin-top:-10%;
+        background-color: #F6F6F6;
+        z-index: 3;
+        border-radius: 25px;
+    
     &__title{
         display: flex;
-        flex-direction: colum;
-        align-items: center;
-        &__details-heart--empty{
+        flex-direction: row;
+        align-items:center;
+        
+
+        &__details{
+        &-heart{
+            margin-top: -20px;
             font-size: 1.2rem;
                 position: absolute;
                 right: 25px;
                 width: 22px;
                 height: 22px;
-        }
-        &__details-heart--solid{
-            font-size: 1.2rem;
-            position: absolute;
-            right: 25px;
-            width: 22px;
-            height: 22px;
-        }
-    }
-    .fa-heart{
-        position: absolute;
-        bottom: -10px;
-
-        &-solid{
-            opacity: 0;
-            transition-property: all;
-            transition-duration: 3ms;
-            &:hover{
-                opacity: 1;
+                &-input {
+                    appearance: none;
+                    
+                }
+                &-input:checked ~ .fa-heart-solid{
+                opacity:1;
                 background: linear-gradient($primary-color,$secondary-color);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
+                }
+            }
+            
+        }
+        .fa-heart{
+            position: absolute;
+            bottom: -10px;
+
+            &-solid{
+                opacity: 0;
+                transition-property: all;
+                transition-duration: 3ms;
+                &:hover{
+                    opacity: 1;
+                    background: linear-gradient($primary-color,$secondary-color);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
             }
         }
     }
-}
-//______________________________________________________________________________________
-//page de menu
-.header{
-    &__btn{
-        
     }
-}
+    }
+    
+    h1{
+        font-family: Shrikhand;
+        font-weight: 400;
+        font-size: 28px;
+    }
+    .menu {
+        
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        
+        &__title{
+            font-size: 16px;
+            font-weight: 300;
+            font-family: Roboto;
+        }
+        &__card{
+            
+            background-color: white;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: row;
+            overflow: hidden;
+            width: 100%;
+
+            &__section
+                {display: flex;
+                flex-direction: column;
+                width: 100%;
+                padding: 10px;
+                }    
+                &__name{
+                    font-weight: bold;
+                    margin: 00px;
+                }
+                &__description{
+                    margin: 0%;
+                }
+                &__price{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: flex-end;
+                    margin: 10px;
+                    &--number{
+                        margin: 0px;
+                    }
+                    &--currency{
+                        margin: 0%;
+                    }
+                }
+                &-check{
+                    $button-width:3rem;
+                    background-color: #99E2D0;
+                    margin-right: -3rem;
+                    width: $button-width;
+                }
+                
+                &:hover  .menu__card-check{
+                    margin-right: 0%;
+                }
+
+            }
+           
+
+        }

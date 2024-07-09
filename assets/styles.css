@@ -12,8 +12,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: fadeOut 8s forwards;
-  z-index: 1;
+  animation: fadeOut 3s forwards;
+  z-index: 10;
 }
 .splash-screen h1 {
   color: white;
@@ -367,49 +367,129 @@ body.animation-complete .main-content {
     margin: 0%;
   }
 }
-.header {
+.header-menu {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.header-menu__btn {
+  display: flex;
+  border: none;
+  background-color: white;
+}
+.header-menu__logo {
+  height: 36px;
+  width: 196px;
+  padding: 20px 0;
+  margin-left: auto;
+  margin-right: auto; /* Centers the logo horizontally */
 }
 
-.main--background {
-  width: 100%;
-  height: 275px;
+.main__background {
+  z-index: 2;
 }
-.main__title {
+.main__conteneur {
+  margin-top: -10%;
+  background-color: #F6F6F6;
+  z-index: 3;
+  border-radius: 25px;
+}
+.main__conteneur__title {
   display: flex;
-  flex-direction: colum;
+  flex-direction: row;
   align-items: center;
 }
-.main__title__details-heart--empty {
+.main__conteneur__title__details-heart {
+  margin-top: -20px;
   font-size: 1.2rem;
   position: absolute;
   right: 25px;
   width: 22px;
   height: 22px;
 }
-.main__title__details-heart--solid {
-  font-size: 1.2rem;
-  position: absolute;
-  right: 25px;
-  width: 22px;
-  height: 22px;
+.main__conteneur__title__details-heart-input {
+  appearance: none;
 }
-.main .fa-heart {
-  position: absolute;
-  bottom: -10px;
-}
-.main .fa-heart-solid {
-  opacity: 0;
-  transition-property: all;
-  transition-duration: 3ms;
-}
-.main .fa-heart-solid:hover {
+.main__conteneur__title__details-heart-input:checked ~ .fa-heart-solid {
   opacity: 1;
   background: linear-gradient(#9356DC, #FF79DA);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+.main__conteneur__title .fa-heart {
+  position: absolute;
+  bottom: -10px;
+}
+.main__conteneur__title .fa-heart-solid {
+  opacity: 0;
+  transition-property: all;
+  transition-duration: 3ms;
+}
+.main__conteneur__title .fa-heart-solid:hover {
+  opacity: 1;
+  background: linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h1 {
+  font-family: Shrikhand;
+  font-weight: 400;
+  font-size: 28px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.menu__title {
+  font-size: 16px;
+  font-weight: 300;
+  font-family: Roboto;
+}
+.menu__card {
+  background-color: white;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  width: 100%;
+}
+.menu__card__section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 10px;
+}
+.menu__card__name {
+  font-weight: bold;
+  margin: 0px;
+}
+.menu__card__description {
+  margin: 0%;
+}
+.menu__card__price {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  margin: 10px;
+}
+.menu__card__price--number {
+  margin: 0px;
+}
+.menu__card__price--currency {
+  margin: 0%;
+}
+.menu__card-check {
+  background-color: #99E2D0;
+  margin-right: -3rem;
+  width: 3rem;
+}
+.menu__card:hover .menu__card-check {
+  margin-right: 0%;
 }
 
 /*# sourceMappingURL=styles.css.map */
