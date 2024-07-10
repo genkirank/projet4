@@ -75,7 +75,7 @@ body.animation-complete .main-content {
   color: black;
   flex-direction: column;
   width: 100%;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922) inset;
+  box-shadow: 0px 4px 4px 0px #00000040 inset;
 }
 .header__logo {
   height: 36px;
@@ -93,7 +93,7 @@ body.animation-complete .main-content {
   height: 50px;
   align-items: center;
   margin-bottom: 0;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+  box-shadow: 0px 4px 4px 0px #00000040;
 }
 .header__location-icon {
   height: 20px;
@@ -115,7 +115,7 @@ body.animation-complete .main-content {
   align-items: center;
   gap: 18px;
   padding-bottom: 50px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922) inset;
+  box-shadow: 0px 4px 4px 0px #00000040 inset;
 }
 .reservation__title {
   font-weight: 700;
@@ -146,7 +146,7 @@ body.animation-complete .main-content {
   font-size: 16px;
   width: 218px;
   height: 50px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+  box-shadow: 0px 4px 4px 0px #00000040;
   text-decoration: none;
   transition: box-shadow 0.3s ease-out, opacity 0.3s ease-out;
 }
@@ -187,7 +187,7 @@ body.animation-complete .main-content {
   justify-content: center;
   flex-direction: row;
   position: relative;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+  box-shadow: 0px 4px 4px 0px #00000040;
 }
 .fonctionnement__desktop .step__icon {
   position: absolute;
@@ -361,6 +361,7 @@ body.animation-complete .main-content {
   .reservation__title {
     font-size: 40px;
   }
+
   .fonctionnement {
     margin: 50px 180px;
   }
@@ -371,6 +372,7 @@ body.animation-complete .main-content {
   .fonctionnement .step {
     padding: 20px 70px 14px 40px;
   }
+
   .restaurants {
     padding: 30px 180px;
   }
@@ -382,6 +384,7 @@ body.animation-complete .main-content {
   .restaurants__card {
     width: 490px;
   }
+
   .footer {
     display: flex;
     flex-direction: row-reverse;
@@ -486,7 +489,7 @@ body.animation-complete .main-content {
   border-radius: 25px;
   width: 186px;
   height: 50px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+  box-shadow: 0px 4px 4px 0px #00000040;
   transition: box-shadow 0.3s ease-out, opacity 0.3s ease-out;
   margin: auto;
   margin-top: 40px;
@@ -612,5 +615,3 @@ h1 {
 .menu__card:hover .menu__card-check {
   margin-right: 0%;
 }
-
-/*# sourceMappingURL=styles.css.map */

@@ -226,6 +226,7 @@ body.animation-complete .main-content {
 }
 
 // Card restaurant styles
+
 .restaurants {
   display: flex;
   flex-direction: column;
@@ -324,6 +325,7 @@ body.animation-complete .main-content {
         bottom: -10px;
 
         &-solid {
+          top: auto;
           opacity: 0;
           transition-property: all;
           transition-duration: 3ms;
@@ -339,7 +341,6 @@ body.animation-complete .main-content {
   }
 }
 
-// Footer styles
 .footer {
   padding: 20px;
   background-color: #353535;
@@ -389,7 +390,8 @@ body.animation-complete .main-content {
     }
   }
 }
-
+//-----------------------------------------------------------------
+//MEDIA DESKTOP
 @media (min-width: 1430px) {
   // Header styles
   // Main section styles
@@ -455,6 +457,7 @@ body.animation-complete .main-content {
     background-color: white;
     margin: 10px;
     cursor: pointer;
+    text-decoration: none;
     i {
       font-size: 30px;
       color: #000;
@@ -592,6 +595,13 @@ h1 {
     width: 100%;
     box-shadow: 2px 1px 8px -3px #000;
     cursor: pointer;
+    animation: appear 1s;
+    animation-fill-mode: both;
+    @for $i from 1 through 5 {
+      &:nth-child(#{$i}) {
+        animation-delay: 300ms * $i;
+      }
+    }
 
     &__section {
       display: flex;
