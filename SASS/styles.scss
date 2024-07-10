@@ -1,14 +1,15 @@
+@use "anime";
 // Define colors
-$primary-color: #9356DC;
-$secondary-color: #FF79DA;
-$tertiary-color: #99E2D0;
-$linear-color:linear-gradient($secondary-color, $primary-color);
+$primary-color: #9356dc;
+$secondary-color: #ff79da;
+$tertiary-color: #99e2d0;
+$linear-color: linear-gradient($secondary-color, $primary-color);
 
 // Apply styles to body
 body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    align-items: center;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  align-items: center;
 }
 // Importer les fichiers de réglages si nécessaire
 
@@ -19,578 +20,640 @@ $animation-duration: 3s;
 
 // Styles pour la splash screen
 .splash-screen {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background-color: $background-color;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: fadeOut $animation-duration forwards;
-    z-index: 10;
-    
-    h1 {
-        color: $text-color;
-        font-size: 3em;
-    }
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: $background-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeOut $animation-duration forwards;
+  z-index: 10;
+
+  h1 {
+    color: $text-color;
+    font-size: 3em;
+  }
 }
 
 // Styles pour le contenu principal
 .main-content {
-    display: none;
-    padding: 20px;
+  display: none;
+  padding: 20px;
 }
 
 // Animation pour faire disparaître la splash screen
 @keyframes fadeOut {
-    0% {
-        opacity: 1;
-        visibility: visible;
-    }
-    90% {
-        opacity: 0;
-        visibility: visible;
-    }
-    100% {
-        opacity: 0;
-        visibility: hidden;
-        display: none;
-    }
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  90% {
+    opacity: 0;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+  }
 }
 
 // Ajouter des classes pour déclencher les animations
 body.animation-complete .splash-screen {
-    display: none;
+  display: none;
 }
 
 body.animation-complete .main-content {
-    display: block;
+  display: block;
 }
-
 
 // Header styles
 .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+  flex-direction: column;
+  width: 100%;
+  box-shadow: 0px 4px 4px 0px #00000040 inset;
+
+  &__logo {
+    height: 36px;
+    width: 196px;
+    padding: 20px 00px;
+  }
+
+  &__location {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: black;
-    flex-direction: column;
+    justify-content: center;
+    background-color: #eaeaea;
     width: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    gap: 10px;
+    height: 50px;
+    align-items: center;
+    margin-bottom: 0;
     box-shadow: 0px 4px 4px 0px #00000040;
 
-
-    &__logo {
-        height: 36px;
-        width: 196px;
-        padding: 20px 00px;
-        
+    &-icon {
+      height: 20px;
+      margin-right: 8px;
     }
-        
-    &__location {
-        display: flex;
-        justify-content: center;
-        background-color: #EAEAEA;
-        width: 100%;
-        font-size: 16px;
-        font-weight: 500;
-        gap: 10px;
-        height: 50px;
-        align-items: center;
-        margin-bottom: 0;
-        box-shadow: 0px 4px 4px 0px #00000040;
-
-        &-icon {
-            height: 20px;
-            margin-right: 8px;
-        }
-    }
+  }
 }
 
 // Main section styles
 .main {
-   
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 // Reservation section styles
 .reservation {
-    display: flex;
-    flex-direction: column;
-    background-color: #F6F6F6;
-    width: 100%;
-    padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #f6f6f6;
+  width: 100%;
+  padding: 30px 0;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  padding-bottom: 50px;
+  box-shadow: 0px 4px 4px 0px #00000040 inset;
+
+  &__title {
+    font-weight: 700;
+    font-size: 24px;
     justify-content: center;
     align-items: center;
-    gap: 18px;
+    text-align: center;
+    margin: 00px 50px 00px 50px;
+  }
 
-    &__title {
-        font-weight: 700;
-        font-size: 24px;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        margin: 00px 50px 00px 50px;
+  &__description {
+    text-align: center;
+    font-family: Roboto;
+    font-size: 18px;
+    color: #353535;
+    font-weight: 300;
+    margin: 00px 30px 00px 30px;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0%;
+    background: $linear-color;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 218px;
+    height: 50px;
+    box-shadow: 0px 4px 4px 0px #00000040;
+    text-decoration: none;
+    transition: box-shadow 0.3s ease-out, opacity 0.3s ease-out;
+    &:hover {
+      opacity: 0.75;
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); // Slightly lighter shadow
     }
-
-    &__description {
-        text-align: center;
-        font-weight: 300;
-        margin:00px 30px 00px 30px;
-    }
-
-    &__button {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        margin: 0% ;
-        background: $linear-color;
-        color: white;
-        border: none;
-        border-radius: 25px;
-        cursor: pointer;
-        font-size: 16px;
-        width: 218px;
-        height: 50px;
-        box-shadow: 0px 4px 4px 0px #00000040;
-        text-decoration: none; 
-        transition: box-shadow 0.3s ease-out, opacity 0.3s ease-out;
-        &:hover {
-          opacity: 0.75;
-            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); // Slightly lighter shadow
-           
-        }
-    }
+  }
 }
-
 
 // Fonctionnement section styles
 .fonctionnement {
-    align-items: center;
-    gap: 18px;
+  align-items: first baseline;
+  gap: 18px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 20px;
+
+  &__title {
+    color: #000;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28.13px;
+    display: flex;
+    align-self: flex-start;
+  }
+  &__desktop {
     display: flex;
     flex-direction: column;
-    position: relative;
-    margin: 20px ;
-    
+    gap: 20px;
 
-    &__title {
-        
-        color: #000;
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 28.13px; 
+    .step {
+      display: flex;
+      padding: 25px 30px 25px 22px;
+      background-color: #f6f6f6;
+      border-radius: 15px;
+      width: 280px;
+      align-items: center;
+      gap: 30px;
+      justify-content: center;
+      flex-direction: row;
+      position: relative;
+      box-shadow: 0px 4px 4px 0px #00000040;
+      &__icon {
+        position: absolute;
+        background-color: $primary-color;
+        width: 24px;
+        height: 24px;
         display: flex;
-        align-self: flex-start;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        color: white;
+        left: -11px;
+
+        &__texte {
+          font-size: 16px;
+          font-weight: 500;
+          font-family: Roboto;
+        }
+      }
+      &__img {
+        width: auto;
+        height: auto;
+      }
     }
-       &__desktop{ 
-            display: flex;
-            flex-direction: column;  
-            gap: 20px;
-            
-
-            .step {
-                display: flex;
-                padding:  25px 30px 25px 22px;
-                background-color: #F6F6F6;
-                border-radius: 15px;
-                width: 100%;
-                align-items: center;
-                gap: 30px;
-                justify-content: center;
-                flex-direction: row;
-                position: relative;
-                box-shadow: 0px 4px 4px 0px #00000040;
-                &__icon{
-                    position: absolute;
-                    background-color: $primary-color;
-                    width: 24px;
-                    height: 24px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    border-radius: 50%;
-                    color: white;
-                    left: -11px;
-                
-                    &__texte{
-                        font-size: 16px;
-                        font-weight: 500;
-                        font-family: Roboto;
-                    } 
-                }
-                &__img{
-                    width: auto;
-                    height: auto;
-                }
-            }
-       }         
-}   
-
-
+  }
+}
 
 // Card restaurant styles
 .restaurants {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #F6F6F6;
-    gap: 18px;
-    padding: 50px 20px 50px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f6f6f6;
+  gap: 18px;
+  padding: 50px 20px 50px 20px;
 
-    
-
-    &__title {
-        margin: 0px;
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 28.13px;
-        display: flex;
-        align-items: center;
-        align-self: flex-start;
-       
+  &_desktop {
+    a {
+      text-decoration: none;
+      color: #000;
     }
-
-    &__card {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 20px;
-        width: 340px;
-        border-radius: 15px;
-        border: none;
-        position: relative;
-
-        &__img {
-            width: 100%;
-            height: 231px;
-            display: block;
-            box-sizing: border-box;
-            border-radius: 15px 15px 0 0;
-            object-fit: cover;
-            height: 174px;
-        }
-
-        &__details {
-            height: 77px;
-            background-color: white;
-            padding: 10px;
-            border: 1px solid #ddd;
-            box-sizing: border-box;
-            border-radius: 0 0 15px 15px;
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-
-            &-tag {
-                background-color: $tertiary-color;
-                padding: 5px;
-                border-radius: 5px;
-                font-size: 0.9rem;
-                color: #008766;
-                position: absolute;
-                right: 15px;
-                top: 15px;
-            }
-
-            &-name {
-                font-size: 18px;
-                font-weight: 700;
-                margin: 0;
-            }
-
-            &-location {
-                font-size: 1rem;
-                color: #666;
-                margin-top: 0;
-            }
-            &-heart {
-                font-size: 1.2rem;
-                position: absolute;
-                right: 25px;
-                width: 22px;
-                height: 22px;
-                &-input {
-                    appearance: none;
-                    
-                }
-                &-input:checked ~ .fa-heart-solid{
-                opacity:1;
-                background: linear-gradient($primary-color,$secondary-color);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                }
-            }
-            
-            .fa-heart{
-                position: absolute;
-                bottom: -10px;
-
-                &-solid{
-                    opacity: 0;
-                    transition-property: all;
-                    transition-duration: 3ms;
-                    &:hover{
-                        opacity: 1;
-                        background: linear-gradient($primary-color,$secondary-color);
-                        -webkit-background-clip: text;
-                        -webkit-text-fill-color: transparent;
-                    }
-                }
-            }
-         }    
-    } 
+  }
+  &__title {
+    margin: 0px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28.13px;
+    display: flex;
+    align-items: center;
+    align-self: flex-start;
   }
 
+  &__card {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    width: 340px;
+    border-radius: 15px;
+    border: none;
+    position: relative;
+
+    &__img {
+      width: 100%;
+      height: 231px;
+      display: block;
+      box-sizing: border-box;
+      border-radius: 15px 15px 0 0;
+      object-fit: cover;
+      height: 174px;
+    }
+
+    &__details {
+      height: 77px;
+      background-color: white;
+      padding: 10px;
+      border: 1px solid #ddd;
+      box-sizing: border-box;
+      border-radius: 0 0 15px 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      &-tag {
+        background-color: $tertiary-color;
+        padding: 5px;
+        border-radius: 5px;
+        font-size: 0.9rem;
+        color: #008766;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+      }
+
+      &-name {
+        font-size: 18px;
+        font-weight: 700;
+        margin: 0;
+      }
+
+      &-location {
+        font-size: 1rem;
+        color: #666;
+        margin-top: 0;
+      }
+      &-heart {
+        font-size: 1.2rem;
+        position: absolute;
+        right: 25px;
+        width: 22px;
+        height: 22px;
+        &-input {
+          appearance: none;
+        }
+        &-input:checked ~ .fa-heart-solid {
+          opacity: 1;
+          background: linear-gradient($primary-color, $secondary-color);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+
+      .fa-heart {
+        position: absolute;
+        bottom: -10px;
+
+        &-solid {
+          opacity: 0;
+          transition-property: all;
+          transition-duration: 3ms;
+          &:hover {
+            opacity: 1;
+            background: linear-gradient($primary-color, $secondary-color);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        }
+      }
+    }
+  }
+}
 
 // Footer styles
 .footer {
-    padding: 20px;
-    background-color: #353535;
-    text-align: center;
+  padding: 20px;
+  background-color: #353535;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+
+  &__logo {
+    width: 139px;
+    height: 27px;
+    margin-bottom: 20px;
+    color: #ddd;
+    margin: 0%;
+  }
+
+  &__link {
+    margin-top: 10px;
+    color: $primary-color;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 10px;
 
-    &__logo {
-        width: 139px;
-        height: 27px;
-        margin-bottom: 20px;
-        color: #ddd;
-        margin: 0%;
-
+    &-text {
+      margin-bottom: 5px;
+      font-weight: 500;
+      color: white;
+      margin: 0%;
     }
 
-    &__link {
-        margin-top: 10Px;
-        color: $primary-color;
-        display: flex;
-        flex-direction:row;
-        align-items: baseline;
-        gap: 10px;
-
-        &-text {
-            margin-bottom: 5px;
-            font-weight: 500;
-            color: white;
-            margin: 0%;
-        }
-
-        &-img {
-            height: 13px;
-            width: 11px;
-            margin: 0%;
-        }
-        &--legal,&--contact{
-            color: white;
-
-        }
-        &--legal, &--contact {
-            cursor: pointer;
-
-            &:hover {
-                text-decoration: underline;
-            }
-        }
+    &-img {
+      height: 13px;
+      width: 11px;
+      margin: 0%;
     }
+    &--legal,
+    &--contact {
+      color: white;
+    }
+    &--legal,
+    &--contact {
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 }
 
-@media (min-width: 1430px){
-
-    // Header styles
-    // Main section styles
-    // Reservation section styles
-    .reservation {
-        &__title {
-            font-size: 40px;
-        }
-    }    
-    // Fonctionnement section styles
-    .fonctionnement{
-      margin: 50px 180px;
-        &__desktop{
-            flex-direction: row;
-            gap: 25px;
-        }
-        .step{
-            padding:20px 70px 14px 40px;
-        }
+@media (min-width: 1430px) {
+  // Header styles
+  // Main section styles
+  // Reservation section styles
+  .reservation {
+    &__title {
+      font-size: 40px;
     }
-   
-    // Card restaurant styles
-    .restaurants{
-        padding: 30px 180px;
-        &_desktop{
-            
-            gap: 50Px 100px;
-            display: flex;
-            flex-wrap: wrap;
-
-        }
-        &__card{
-            width: 490px;
-        }
+  }
+  // Fonctionnement section styles
+  .fonctionnement {
+    margin: 50px 180px;
+    &__desktop {
+      flex-direction: row;
+      gap: 25px;
     }
-
-    // Footer styles
-    .footer{
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: center;
-        gap: 20px;
-        &__desktop{
-            display: flex;
-            flex-direction: row;
-            gap: 20px;
-        }
-        &__link{
-            margin: 0%;
-        }
+    .step {
+      padding: 20px 70px 14px 40px;
     }
-}   
+  }
+
+  // Card restaurant styles
+  .restaurants {
+    padding: 30px 180px;
+    &_desktop {
+      gap: 50px 100px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    &__card {
+      width: 490px;
+    }
+  }
+
+  // Footer styles
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 20px;
+    &__desktop {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+    }
+    &__link {
+      margin: 0%;
+    }
+  }
+}
 //______________________________________________________________________________________
 //page de menu
 .header-menu {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 
+  width: 100%;
 
-&__btn {
+  &__btn {
     display: flex;
     border: none;
     background-color: white;
-  
-}
+    margin: 10px;
+    cursor: pointer;
+    i {
+      font-size: 30px;
+      color: #000;
+    }
+  }
 
-&__logo {
+  &__logo {
     height: 36px;
     width: 196px;
     padding: 20px 0;
-    margin-left: auto;
-    margin-right: auto; /* Centers the logo horizontally */
+    margin-left: 36px;
+    margin-right: auto;
+    a {
+      text-decoration: none;
+      color: #000;
+    }
+  }
 }
+.main {
+  &__background {
+    z-index: 2;
+  }
+  &__conteneur {
+    margin-top: -10%;
+    background-color: #f6f6f6;
+    z-index: 3;
+    border-radius: 25px 25px 0px 0px;
+    padding: 00px 10px;
+
+    &__title {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      &__details {
+        &-heart {
+          margin-top: -20px;
+          font-size: 1.2rem;
+          position: absolute;
+          right: 25px;
+          width: 22px;
+          height: 22px;
+          cursor: pointer;
+          &-input {
+            appearance: none;
+          }
+          &-input:checked ~ .fa-heart-solid {
+            opacity: 1;
+            background: linear-gradient($primary-color, $secondary-color);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        }
+      }
+      .fa-heart {
+        position: absolute;
+        bottom: -10px;
+
+        &-solid {
+          opacity: 0;
+          transition-property: all;
+          transition-duration: 3ms;
+          &:hover {
+            opacity: 1;
+            background: linear-gradient($primary-color, $secondary-color);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        }
+      }
+    }
+  }
+  &__button {
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 00px;
+    background: $linear-color;
+    border: none;
+    border-radius: 25px;
+    width: 186px;
+    height: 50px;
+    box-shadow: 0px 4px 4px 0px #00000040;
+    transition: box-shadow 0.3s ease-out, opacity 0.3s ease-out;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    cursor: pointer;
+    a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+    }
+    &:hover {
+      opacity: 0.75;
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); // Slightly lighter shadow
+    }
+  }
 }
-.main{
-    &__background{
-        z-index: 2;
+
+h1 {
+  font-family: Shrikhand;
+  font-weight: 400;
+  font-size: 28px;
+}
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  &__title {
+    font-size: 16px;
+    font-weight: 300;
+    font-family: Roboto;
+    position: relative;
+
+    &::after {
+      content: "";
+      height: 0.25rem;
+      width: 40px;
+      position: absolute;
+      background-color: #99e2d0;
+      top: 1.5rem;
+      left: 0%;
     }
-    &__conteneur{
-        margin-top:-10%;
-        background-color: #F6F6F6;
-        z-index: 3;
-        border-radius: 25px;
-    
-    &__title{
+  }
+  &__card {
+    white-space: nowrap;
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    width: 100%;
+    box-shadow: 2px 1px 8px -3px #000;
+    cursor: pointer;
+
+    &__section {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding: 10px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    &__name {
+      font-weight: 500;
+      font-size: 18px;
+      margin: 00px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    &__description {
+      margin: 0%;
+      font-size: 15px;
+      font-weight: 300;
+      font-family: Roboto;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    &__price {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+      margin: 10px;
+      padding-right: 20px;
+      font-weight: 500;
+
+      &--number {
+        margin: 0px;
+      }
+      &--currency {
+        margin: 0%;
+      }
+    }
+    &-check {
+      $button-width: 6rem;
+      background-color: #99e2d0;
+      margin-right: -$button-width;
+      display: flex;
+      width: $button-width;
+      transition: margin-right 0.5s;
+      justify-content: center;
+      align-items: flex-end;
+
+      i {
+        color: white;
         display: flex;
-        flex-direction: row;
-        align-items:center;
-        
-
-        &__details{
-        &-heart{
-            margin-top: -20px;
-            font-size: 1.2rem;
-                position: absolute;
-                right: 25px;
-                width: 22px;
-                height: 22px;
-                &-input {
-                    appearance: none;
-                    
-                }
-                &-input:checked ~ .fa-heart-solid{
-                opacity:1;
-                background: linear-gradient($primary-color,$secondary-color);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                }
-            }
-            
-        }
-        .fa-heart{
-            position: absolute;
-            bottom: -10px;
-
-            &-solid{
-                opacity: 0;
-                transition-property: all;
-                transition-duration: 3ms;
-                &:hover{
-                    opacity: 1;
-                    background: linear-gradient($primary-color,$secondary-color);
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                }
-            }
-        }
+        font-size: 20px;
+        align-self: center;
+      }
     }
-    }
-    }
-    
-    h1{
-        font-family: Shrikhand;
-        font-weight: 400;
-        font-size: 28px;
-    }
-    .menu {
-        
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-        
-        &__title{
-            font-size: 16px;
-            font-weight: 300;
-            font-family: Roboto;
-        }
-        &__card{
-            
-            background-color: white;
-            border-radius: 15px;
-            display: flex;
-            flex-direction: row;
-            overflow: hidden;
-            width: 100%;
 
-            &__section
-                {display: flex;
-                flex-direction: column;
-                width: 100%;
-                padding: 10px;
-                }    
-                &__name{
-                    font-weight: bold;
-                    margin: 00px;
-                }
-                &__description{
-                    margin: 0%;
-                }
-                &__price{
-                    display: flex;
-                    flex-direction: row;
-                    align-items: flex-end;
-                    margin: 10px;
-                    &--number{
-                        margin: 0px;
-                    }
-                    &--currency{
-                        margin: 0%;
-                    }
-                }
-                &-check{
-                    $button-width:3rem;
-                    background-color: #99E2D0;
-                    margin-right: -3rem;
-                    width: $button-width;
-                }
-                
-                &:hover  .menu__card-check{
-                    margin-right: 0%;
-                }
-
-            }
-           
-
-        }
+    &:hover .menu__card-check {
+      margin-right: 0%;
+      i {
+        @extend .quarter-spin;
+      }
+    }
+  }
+}
