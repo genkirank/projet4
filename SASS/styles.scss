@@ -390,58 +390,7 @@ body.animation-complete .main-content {
     }
   }
 }
-//-----------------------------------------------------------------
-//MEDIA DESKTOP
-@media (min-width: 1430px) {
-  // Header styles
-  // Main section styles
-  // Reservation section styles
-  .reservation {
-    &__title {
-      font-size: 40px;
-    }
-  }
-  // Fonctionnement section styles
-  .fonctionnement {
-    margin: 50px 180px;
-    &__desktop {
-      flex-direction: row;
-      gap: 25px;
-    }
-    .step {
-      padding: 20px 70px 14px 40px;
-    }
-  }
 
-  // Card restaurant styles
-  .restaurants {
-    padding: 30px 180px;
-    &_desktop {
-      gap: 50px 100px;
-      display: flex;
-      flex-wrap: wrap;
-    }
-    &__card {
-      width: 490px;
-    }
-  }
-
-  // Footer styles
-  .footer {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    gap: 20px;
-    &__desktop {
-      display: flex;
-      flex-direction: row;
-      gap: 20px;
-    }
-    &__link {
-      margin: 0%;
-    }
-  }
-}
 //______________________________________________________________________________________
 //page de menu
 .header-menu {
@@ -664,6 +613,66 @@ h1 {
       i {
         @extend .quarter-spin;
       }
+    }
+  }
+}
+//-----------------------------------------------------------------
+//MEDIA DESKTOP
+@media (min-width: 1430px) {
+  // Header styles
+  // Main section styles
+  // Reservation section styles
+  .reservation {
+    &__title {
+      font-size: 40px;
+    }
+  }
+  // Fonctionnement section styles
+  .fonctionnement {
+    margin: 50px 180px;
+    &__desktop {
+      flex-direction: row;
+      gap: 25px;
+    }
+    .step {
+      padding: 20px 70px 14px 40px;
+    }
+  }
+
+  // Card restaurant styles
+  .restaurants {
+    padding: 30px 180px;
+    &_desktop {
+      gap: 50px 100px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    &__card {
+      width: 490px;
+    }
+  }
+
+  // Footer styles
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 20px;
+    &__desktop {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+    }
+    &__link {
+      margin: 0%;
+    }
+  }
+  .main {
+    align-items: center;
+
+    &__conteneur {
+      width: 72%;
+      height: 1221px;
     }
   }
 }

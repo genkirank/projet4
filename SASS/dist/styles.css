@@ -357,49 +357,6 @@ body.animation-complete .main-content {
   text-decoration: underline;
 }
 
-@media (min-width: 1430px) {
-  .reservation__title {
-    font-size: 40px;
-  }
-
-  .fonctionnement {
-    margin: 50px 180px;
-  }
-  .fonctionnement__desktop {
-    flex-direction: row;
-    gap: 25px;
-  }
-  .fonctionnement .step {
-    padding: 20px 70px 14px 40px;
-  }
-
-  .restaurants {
-    padding: 30px 180px;
-  }
-  .restaurants_desktop {
-    gap: 50px 100px;
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .restaurants__card {
-    width: 490px;
-  }
-
-  .footer {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    gap: 20px;
-  }
-  .footer__desktop {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-  }
-  .footer__link {
-    margin: 0%;
-  }
-}
 .header-menu {
   display: flex;
   flex-direction: row;
@@ -614,4 +571,55 @@ h1 {
 }
 .menu__card:hover .menu__card-check {
   margin-right: 0%;
+}
+@media (min-width: 1430px) {
+  .reservation__title {
+    font-size: 40px;
+  }
+
+  .fonctionnement {
+    margin: 50px 180px;
+  }
+  .fonctionnement__desktop {
+    flex-direction: row;
+    gap: 25px;
+  }
+  .fonctionnement .step {
+    padding: 20px 70px 14px 40px;
+  }
+
+  .restaurants {
+    padding: 30px 180px;
+  }
+  .restaurants_desktop {
+    gap: 50px 100px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .restaurants__card {
+    width: 490px;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 20px;
+  }
+  .footer__desktop {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  .footer__link {
+    margin: 0%;
+  }
+
+  .main {
+    align-items: center;
+  }
+  .main__conteneur {
+    width: 72%;
+    height: 1221px;
+  }
 }
