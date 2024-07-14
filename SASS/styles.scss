@@ -308,6 +308,7 @@ body.animation-complete .main-content {
         position: absolute;
         right: 25px;
         width: 22px;
+
         height: 22px;
         &-input {
           appearance: none;
@@ -323,13 +324,15 @@ body.animation-complete .main-content {
       .fa-heart {
         position: absolute;
         bottom: -10px;
+        transition-duration: 0.3s;
 
         &-solid {
           top: auto;
           opacity: 0;
           transition-property: all;
-          transition-duration: 5ms;
+          transition-duration: 0.3s;
           &:hover {
+            transition-duration: 0.3s;
             opacity: 1;
             background: linear-gradient($primary-color, $secondary-color);
             -webkit-background-clip: text;
@@ -393,6 +396,9 @@ body.animation-complete .main-content {
 
 //______________________________________________________________________________________
 //page de menu
+body {
+  display: contents;
+}
 .header-menu {
   display: flex;
   flex-direction: row;
@@ -429,7 +435,9 @@ body.animation-complete .main-content {
   &__background {
     z-index: 2;
     width: 100%;
-    height: 17rem;
+    height: 28vh;
+    object-fit: cover;
+    transition-duration: 0.3s;
   }
   &__conteneur {
     margin-top: -10%;
@@ -454,6 +462,7 @@ body.animation-complete .main-content {
           right: 25px;
           width: 22px;
           height: 22px;
+
           cursor: pointer;
 
           &-input {
@@ -553,7 +562,7 @@ h1 {
     width: 100%;
     box-shadow: 2px 1px 8px -3px #000;
     cursor: pointer;
-    animation: appear 20s;
+    animation: appear 3s;
     @extend.appear;
     animation-fill-mode: both;
     @for $i from 1 through 5 {
@@ -626,11 +635,48 @@ h1 {
     }
   }
 }
+//________________________________________________________________________
+//MEDia intermédier
+@media (min-width: 800px) {
+  .main__background {
+    transition-duration: 0.3s;
+    height: 60vh;
+  }
+}
 //-----------------------------------------------------------------
 //MEDIA DESKTOP
 @media (min-width: 1430px) {
   // Header styles
   // Main section styles
+  .main {
+    align-items: center;
+
+    &__background {
+      max-width: 100%;
+      height: 60vh;
+      transition-duration: 0.3s;
+    }
+    &__conteneur {
+      width: 72%;
+      max-width: 72%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      &__title {
+        &__details {
+          &-heart {
+            right: 33rem;
+          }
+        }
+      }
+    }
+    &__button {
+      margin-top: 0%;
+      margin-bottom: 40px;
+    }
+  }
+
   // Reservation section styles
   .reservation {
     &__title {
@@ -664,41 +710,27 @@ h1 {
 
   // Footer styles
   .footer {
+    height: 74px;
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
-    gap: 20px;
+    gap: 6≠0px;
     &__desktop {
       display: flex;
       flex-direction: row;
-      gap: 20px;
+      gap: 30px;
+      &-1,
+      &-2 {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+      }
     }
     &__link {
       margin: 0%;
     }
   }
-  .main {
-    align-items: center;
 
-    &__background {
-      max-width: 100%;
-      height: 33rem;
-      max-height: fit-content;
-    }
-    &__conteneur {
-      width: 72%;
-      max-width: 72%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
-      gap: 40px;
-    }
-    &__button {
-      margin-top: 0%;
-      margin-bottom: 40px;
-    }
-  }
   .menu {
     width: 634px;
   }
