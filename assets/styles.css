@@ -10,9 +10,18 @@
   animation: quarter-spin 900ms;
 }
 
+.appear, .main__conteneur__title__details-heart-input:checked ~ .fa-heart-solid, .main__conteneur__title .fa-heart-solid, .menu__card {
+  animation-name: appear;
+  animation-duration: 3ms;
+  animation-fill-mode: forwards;
+}
+
 @keyframes appear {
   0% {
     transform: scale(0);
+  }
+  50% {
+    transform: scale(0.5);
   }
   100% {
     transform: scale(1);
@@ -156,7 +165,7 @@ body.animation-complete .main-content {
 }
 
 .fonctionnement {
-  align-items: first baseline;
+  align-items: center;
   gap: 18px;
   display: flex;
   flex-direction: column;
@@ -305,7 +314,7 @@ body.animation-complete .main-content {
   top: auto;
   opacity: 0;
   transition-property: all;
-  transition-duration: 3ms;
+  transition-duration: 5ms;
 }
 .restaurants__card__details .fa-heart-solid:hover {
   opacity: 1;
@@ -432,7 +441,7 @@ body.animation-complete .main-content {
 .main__conteneur__title .fa-heart-solid {
   opacity: 0;
   transition-property: all;
-  transition-duration: 3ms;
+  transition-duration: 300ms;
 }
 .main__conteneur__title .fa-heart-solid:hover {
   opacity: 1;
@@ -505,7 +514,7 @@ h1 {
   width: 100%;
   box-shadow: 2px 1px 8px -3px #000;
   cursor: pointer;
-  animation: appear 1s;
+  animation: appear 20s;
   animation-fill-mode: both;
 }
 .menu__card:nth-child(1) {

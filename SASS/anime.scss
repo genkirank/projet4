@@ -12,10 +12,17 @@ $quarter-spin-duration: 900ms;
 .quarter-spin {
   animation: quarter-spin $quarter-spin-duration;
 }
-
+.appear {
+  animation-name: appear;
+  animation-duration: 3ms;
+  animation-fill-mode: forwards;
+}
 @keyframes appear {
   0% {
     transform: scale(0);
+  }
+  50% {
+    transform: scale(0.5);
   }
   100% {
     transform: scale(1);

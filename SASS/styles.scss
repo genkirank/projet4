@@ -167,7 +167,7 @@ body.animation-complete .main-content {
 
 // Fonctionnement section styles
 .fonctionnement {
-  align-items: first baseline;
+  align-items: center;
   gap: 18px;
   display: flex;
   flex-direction: column;
@@ -328,7 +328,7 @@ body.animation-complete .main-content {
           top: auto;
           opacity: 0;
           transition-property: all;
-          transition-duration: 3ms;
+          transition-duration: 5ms;
           &:hover {
             opacity: 1;
             background: linear-gradient($primary-color, $secondary-color);
@@ -455,11 +455,13 @@ body.animation-complete .main-content {
           width: 22px;
           height: 22px;
           cursor: pointer;
+
           &-input {
             appearance: none;
           }
           &-input:checked ~ .fa-heart-solid {
             opacity: 1;
+            @extend .appear;
             background: linear-gradient($primary-color, $secondary-color);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -471,9 +473,10 @@ body.animation-complete .main-content {
         bottom: -10px;
 
         &-solid {
+          @extend .appear;
           opacity: 0;
           transition-property: all;
-          transition-duration: 3ms;
+          transition-duration: 300ms;
           &:hover {
             opacity: 1;
             background: linear-gradient($primary-color, $secondary-color);
@@ -550,7 +553,8 @@ h1 {
     width: 100%;
     box-shadow: 2px 1px 8px -3px #000;
     cursor: pointer;
-    animation: appear 1s;
+    animation: appear 20s;
+    @extend.appear;
     animation-fill-mode: both;
     @for $i from 1 through 5 {
       &:nth-child(#{$i}) {
