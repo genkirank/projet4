@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @keyframes quarter-spin {
   0% {
     transform: rotate(-270deg);
@@ -662,7 +661,7 @@ h1 {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
-    gap: 6≠0px;
+    gap: 6px;
   }
   .footer__desktop {
     display: flex;
