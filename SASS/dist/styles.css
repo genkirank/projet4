@@ -639,14 +639,16 @@ h1 {
   }
 
   .fonctionnement {
-    margin: 50px 180px;
+    margin: 0px;
+    padding: 30px 180px;
   }
   .fonctionnement__desktop {
     flex-direction: row;
     gap: 25px;
   }
   .fonctionnement .step {
-    padding: 20px 70px 14px 40px;
+    width: 100%;
+    padding: 17px 70px 17px 40px;
   }
 
   .restaurants {
