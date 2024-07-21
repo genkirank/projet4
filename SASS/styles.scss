@@ -661,7 +661,7 @@ h1 {
   }
   // Main section styles
   .main {
-    align-items: center;
+    
 
     &__background {
       max-width: 100%;
@@ -697,6 +697,7 @@ h1 {
   }
   // Fonctionnement section styles
   .fonctionnement {
+    width: auto;
     margin: 0px;
     padding: 30px 180px;
     &__desktop {
