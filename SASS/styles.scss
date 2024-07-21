@@ -698,12 +698,14 @@ h1 {
   // Fonctionnement section styles
   .fonctionnement {
     margin: 0px;
+    padding: 30px 180px;
     &__desktop {
       flex-direction: row;
       gap: 25px;
     }
     .step {
-      padding: 20px 70px 14px 40px;
+      width:100%;
+      padding: 17px 70px 17px 40px;
     }
   }
 
