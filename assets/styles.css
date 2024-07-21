@@ -636,7 +636,7 @@ h1 {
     font-size: 40px;
   }
   .fonctionnement {
-    margin: 50px 180px;
+    margin: 0px;
   }
   .fonctionnement__desktop {
     flex-direction: row;
